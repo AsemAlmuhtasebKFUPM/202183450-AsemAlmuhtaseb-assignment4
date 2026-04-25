@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Asem Almuhtaseb, a student web developer specializing in clean, responsive websites." />
+  <title>Asem Almuhtaseb | Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container header-inner">
+      <h1 class="logo">Asem Almuhtaseb</h1>
+
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#quote">Quote</a>
+        <a href="#contact">Contact</a>
+        <button id="themeBtn" type="button" aria-label="Toggle dark/light theme">Toggle Theme</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section hero" id="home">
+      <div class="container">
+        <p class="kicker">Student Developer • Portfolio</p>
+        <h1>
+          Hi, I’m <span style="color: var(--accent);">Asem Almuhtaseb</span>.
+        </h1>
+        <p class="tagline">I build simple, clean, responsive websites.</p>
+
+
+        <div class="cta-row">
+          <a href="#projects">
+            <button class="btn-primary" type="button">View Projects</button>
+          </a>
+          <a href="#contact">
+            <button type="button">Contact Me</button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Me</h2>
+        <p class="tagline" style="margin-top: 0;">
+          I build simple, clean, responsive websites.
+        </p>
+        <p>
+          I’m a beginner web developer learning how to build clean, responsive websites with HTML, CSS, and JavaScript.
+          I enjoy turning simple ideas into real pages and improving my skills by building projects step by step.
+          Right now, I’m focused on front-end development and building a strong portfolio.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <p class="tagline">Search, filter, and sort projects.</p>
+
+        <div class="project-controls">
+          <div class="project-search">
+            <label for="projectSearch">Search Projects</label>
+            <input
+              type="text"
+              id="projectSearch"
+              placeholder="Type to search projects..."
+              aria-label="Search projects"
+            />
+          </div>
+
+          <div class="project-filter">
+            <label for="projectCategory">Filter by Category</label>
+            <select id="projectCategory" aria-label="Filter projects by category">
+              <option value="all">All</option>
+              <option value="productivity">Productivity</option>
+              <option value="weather">Weather</option>
+            </select>
+          </div>
+
+          <div class="project-sort">
+            <label for="projectSort">Sort Projects</label>
+            <select id="projectSort" aria-label="Sort projects">
+              <option value="default">Default Order</option>
+              <option value="az">Name A-Z</option>
+              <option value="za">Name Z-A</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid" id="projectsGrid">
+          <article
+            class="card project-card"
+            data-title="StudyBuddy Planner"
+            data-description="A simple study planner web app UI concept that helps students organize daily tasks and build habits. It focuses on a clean layout, readable sections, and a modern card-based design."
+            data-category="productivity"
+          >
+            <img class="project-media-img" src="assets/images/Project1.webp" alt="StudyBuddy Planner preview">
+            <div class="card-body">
+              <h3 class="project-title">StudyBuddy Planner</h3>
+              <p class="project-description">
+                A simple study planner web app UI concept that helps students organize daily tasks and build habits.
+                It focuses on a clean layout, readable sections, and a modern card-based design.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="card project-card"
+            data-title="WeatherSnap"
+            data-description="A weather dashboard UI concept that shows current conditions and a short forecast in a clear, friendly design. It's designed to be easy to read on mobile and uses simple visual icons."
+            data-category="weather"
+          >
+            <img class="project-media-img" src="assets/images/Project2.webp" alt="WeatherSnap preview">
+            <div class="card-body">
+              <h3 class="project-title">WeatherSnap</h3>
+              <p class="project-description">
+                A weather dashboard UI concept that shows current conditions and a short forecast in a clear, friendly design.
+                It's designed to be easy to read on mobile and uses simple visual icons.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <p id="noResults" class="no-results" hidden>No projects match your current search and filter.</p>
+      </div>
+    </section>
+
+    <section id="quote" class="section">
+      <div class="container">
+        <h2>Inspirational Quote</h2>
+        <p class="tagline">A random quote loaded from an external API.</p>
+
+        <div class="card quote-card">
+          <p id="quoteText" class="quote-text">Loading quote...</p>
+          <p id="quoteAuthor" class="quote-author"></p>
+
+          <div class="quote-actions">
+            <button id="newQuoteBtn" class="btn-primary" type="button">New Quote</button>
+          </div>
+
+          <p id="quoteStatus" class="quote-status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+
+        <form id="contactForm" class="card form">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" required />
+            <small>Enter your full name.</small>
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" required />
+            <small>Use a valid email format.</small>
+          </div>
+
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" required></textarea>
+            <small>Write at least a few words.</small>
+          </div>
+          <button class="btn-primary" type="submit">Send</button>
+          <p id="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Asem Almuhtaseb</p>
+      <a href="#home" class="back-to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>
