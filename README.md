@@ -29,6 +29,8 @@ The portfolio showcases two projects (StudyBuddy Planner and WeatherSnap) with a
    - No server or build tools required
    - Works in all modern browsers (Chrome, Firefox, Safari, Edge)
 
+
+
 3. **Features to try**
 - Click "Toggle Theme" to switch between dark and light modes
 - Navigate using the menu links
@@ -37,6 +39,14 @@ The portfolio showcases two projects (StudyBuddy Planner and WeatherSnap) with a
 - Submit the contact form (demo form - no backend)
 - inspirational quote section using an external API
 - Click "Back to top" in the footer to scroll to home
+
+## Live Deployment
+
+The project is publicly deployed using GitHub Pages.
+
+Live Website: https://AsemAlmuhtasebKFUPM.github.io/202183450-AsemAlmuhtaseb-assignment4/
+
+GitHub Repository: https://github.com/AsemAlmuhtasebKFUPM/202183450-AsemAlmuhtaseb-assignment4
 
 ## AI Usage Summary
 
